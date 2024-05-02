@@ -12,10 +12,14 @@ import { SaleComponent } from './pages/sale/sale.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductItemComponent } from './components/product-item/product-item.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CartComponent, SaleComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [AppComponent, HomeComponent, CartComponent, SaleComponent, ProductListComponent, ProductItemComponent, ProductDetailComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })

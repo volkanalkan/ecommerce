@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from '../../models/product.model';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-product-detail',
@@ -26,8 +26,8 @@ export class ProductDetailComponent {
     []
   );
 
-  constructor(carouselConfig: NgbCarouselConfig) {
-    carouselConfig.interval = 0;
-    carouselConfig.wrap = false;
-  }
+  // constructor(carouselConfig: NgbCarouselConfig) {
+  //   carouselConfig.interval = 0;
+  //   carouselConfig.wrap = false;
+  // }
 }

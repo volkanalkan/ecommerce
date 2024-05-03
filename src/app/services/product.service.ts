@@ -25,12 +25,12 @@ export class ProductService {
   ];
   constructor(private http: HttpClient) {}
 
-  // getAllProducts(): Observable<any[]> {
-  //   debugger;
-  //   return this.http.get<any[]>(
-  //     'http://onlinetestapi.gerasim.in/api/Ecomm/GetAllProducts'
-  //   );
-  // }
+  getAllProducts(): Observable<any[]> {
+    debugger;
+    return this.http.get<any[]>(
+      'http://onlinetestapi.gerasim.in/api/Ecomm/GetAllProducts'
+    );
+  }
 
   getProducts(): Array<Product> {
     return this.products.slice();

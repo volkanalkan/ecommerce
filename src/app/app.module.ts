@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
-import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap'; //it should be both of them
 
 @NgModule({
   declarations: [

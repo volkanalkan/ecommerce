@@ -16,6 +16,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { CommentListComponent } from './components/comment-list/comment-list.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
     ProductListComponent,
     ProductItemComponent,
     ProductDetailComponent,
+    CommentListComponent,
   ],
   imports: [
     BrowserModule,

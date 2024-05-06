@@ -124,7 +124,7 @@
   </div>
   <div class="row pt-5">
     <div ngbAccordion>
-      <div ngbAccordionItem>
+      <div ngbAccordionItem [collapsed]="false">
         <h2 ngbAccordionHeader>
           <button ngbAccordionButton>Product Information</button>
         </h2>
@@ -307,11 +307,9 @@
     </div>
   </div>
   <section id="comments" class="py-5">
-    <div
-      class="row text-center align-items-center"
-      style="height: 20rem; border: 2px solid black"
-    >
-      <h1 class="display-1">Comments will be displayed</h1>
-    </div>
+    <app-comment-list
+      [comments]="product.comments"
+      [avgRating]="product.rating"
+    ></app-comment-list>
   </section>
 </div>

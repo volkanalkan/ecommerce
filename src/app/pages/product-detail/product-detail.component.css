@@ -2,8 +2,19 @@ a {
   text-decoration: none;
 }
 
-/* input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-} */
+.btn-circle {
+  border-radius: 50%;
+  border: none;
+  background-color: #6d757d;
+  width: 48px;
+  height: 48px;
+}
+
+.btn-circle:hover {
+  background-color: #5d636a;
+}
+
+.btn-circle i {
+  font-size: 1.2rem;
+  color: white;
+}

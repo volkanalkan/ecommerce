@@ -19,7 +19,10 @@
       </li>
     </ol>
   </nav>
-  <div class="row py-3 gx-5">
+  <div
+    class="row py-3 gx-5"
+    style="background-color: blanchedalmond; border-radius: 8px"
+  >
     <div class="col-lg-7">
       <ngb-carousel>
         @if (images.length < 1) {
@@ -34,7 +37,7 @@
         } @else { @for (item of images; track $index) {
         <ng-template ngbSlide>
           <div class="picsum-img-wrapper">
-            <img [src]="item" alt="Random first slide" />
+            <img [src]="item" alt="Random first slide" style="height: 400px" />
           </div>
         </ng-template>
         } }
@@ -76,84 +79,237 @@
       <div class="row py-5">
         <p class="h1">${{ product.price }}</p>
       </div>
-      <div class="d-flex flex-row justify-content-center">
-        <div class="">
-          <button class="btn btn-secondary btn-lg rounded-circle" type="button">
-            <i class="bi bi-heart" style="font-size: 1rem"></i>
-          </button>
-        </div>
-        <div class="px-3">
-          <a href="#" class="btn btn-primary btn-lg px-4"
-            ><i class="bi bi-cart3"> Add to cart</i></a
-          >
-        </div>
-        <div class="">
-          <!-- <div
-              class="input-group"
-              role="group"
-              aria-label="Button group for number input"
+      <div class="">
+        <div class="d-flex flex-row justify-content-start">
+          <div class="">
+            <button class="btn-circle" type="button">
+              <i class="bi bi-heart"></i>
+            </button>
+          </div>
+          <div class="px-3">
+            <a href="#" class="btn btn-primary btn-lg px-4"
+              ><i class="bi bi-cart3"> Add to cart</i></a
             >
-              <button class="btn btn-secondary btn-lg" type="button">
-                <i class="bi bi-dash-lg"></i>
-              </button>
-              <input
-                class="text-center"
-                type="number"
-                style="width: 3rem; -webkit-appearance: none"
-                value="30"
-                max="30"
-                min="1"
-                readonly
-              />
-              <button class="btn btn-secondary btn-lg" type="button">
-                <i class="bi bi-plus-lg"></i>
-              </button>
-            </div> -->
-          <!-- <input type="number" value="30" min="1" max="30" /> -->
-          <!--  -->
-          <!-- <div>
-            <input
-              type="number"
-              value="4.5"
-              data-decimals="2"
-              min="0"
-              max="9"
-              step="0.1"
-              style="display: none"
-            />
-            <div class="input-group">
-              <button
-                style="min-width: 2.5rem"
-                class="btn btn-decrement btn-outline-secondary btn-minus"
-                type="button"
-              >
-                <strong>−</strong></button
-              ><input
-                type="text"
-                inputmode="decimal"
-                style="text-align: center"
-                class="form-control"
-                placeholder=""
-              /><button
-                style="min-width: 2.5rem"
-                class="btn btn-increment btn-outline-secondary btn-plus"
-                type="button"
-              >
-                <strong>+</strong>
-              </button>
+          </div>
+          <div class="">
+            <div>
+              <div class="input-group">
+                <button
+                  style="width: 2.5rem; padding-left: 0; padding-right: 0"
+                  class="btn btn-decrement btn-secondary btn-minus btn-lg"
+                  type="button"
+                >
+                  <i class="bi bi-dash"></i></button
+                ><input
+                  type="text"
+                  inputmode="decimal"
+                  style="text-align: center; width: 3rem; font-weight: 600"
+                  class="form-control"
+                  value="1"
+                  min="1"
+                  max="30"
+                /><button
+                  style="width: 2.5rem; padding-left: 0; padding-right: 0"
+                  class="btn btn-increment btn-secondary btn-plus btn-lg"
+                  type="button"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row" style="height: 50rem; border: 2px solid black"></div>
-  <section id="comments">
-    <div
-      class="row text-center align-items-center"
-      style="height: 20rem; border: 2px solid black"
-    >
-      <h1 class="display-1">Comments will be displayed</h1>
+  <div class="row pt-5">
+    <div ngbAccordion>
+      <div ngbAccordionItem [collapsed]="false">
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton>Product Information</button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <table class="table table-striped">
+              <thead></thead>
+              <tbody>
+                <tr>
+                  <td>Product Dimensions</td>
+                  <td>12.1 x 3.9 x 1.5 inches</td>
+                </tr>
+                <tr>
+                  <td>Item Weight</td>
+                  <td>1.48 pounds</td>
+                </tr>
+                <tr>
+                  <td>Country of Origin</td>
+                  <td>China</td>
+                </tr>
+                <tr>
+                  <td>Product Dimensions</td>
+                  <td>12.1 x 3.9 x 1.5 inches</td>
+                </tr>
+                <tr>
+                  <td>Item Weight</td>
+                  <td>1.48 pounds</td>
+                </tr>
+                <tr>
+                  <td>Country of Origin</td>
+                  <td>China</td>
+                </tr>
+                <tr>
+                  <td>Product Dimensions</td>
+                  <td>12.1 x 3.9 x 1.5 inches</td>
+                </tr>
+                <tr>
+                  <td>Item Weight</td>
+                  <td>1.48 pounds</td>
+                </tr>
+                <tr>
+                  <td>Country of Origin</td>
+                  <td>China</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div ngbAccordionItem>
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton>Product Description</button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <p>{{ product.details }}</p>
+          </div>
+        </div>
+      </div>
+      <div ngbAccordionItem>
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton>Warranty & Support</button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+              cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+              laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+              on it squid single-origin coffee nulla assumenda shoreditch et.
+              Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+              nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+              lomo. Leggings occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't heard of them
+              accusamus labore sustainable VHS.
+            </ng-template>
+          </div>
+        </div>
+      </div>
+      <div ngbAccordionItem>
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton>FAQs</button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <div ngbAccordion closeOthers="true">
+              <div ngbAccordionItem>
+                <h3 ngbAccordionHeader>
+                  <button ngbAccordionButton>
+                    Gift wrapping and packaging
+                  </button>
+                </h3>
+                <div ngbAccordionCollapse>
+                  <div ngbAccordionBody>
+                    <p>
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck
+                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin
+                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                      helvetica. Ad vegan excepteur butcher vice lomo. Leggings
+                      occaecat craft beer farm-to-table, raw denim aesthetic
+                      synth nesciunt you probably haven't heard of them
+                      accusamus labore sustainable VHS.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div ngbAccordionItem>
+                <h3 ngbAccordionHeader>
+                  <button ngbAccordionButton>
+                    Custom and personalized orders
+                  </button>
+                </h3>
+                <div ngbAccordionCollapse>
+                  <div ngbAccordionBody>
+                    <p>
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck
+                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin
+                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                      helvetica. Ad vegan excepteur butcher vice lomo. Leggings
+                      occaecat craft beer farm-to-table, raw denim aesthetic
+                      synth nesciunt you probably haven't heard of them
+                      accusamus labore sustainable VHS.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div ngbAccordionItem>
+                <h3 ngbAccordionHeader>
+                  <button ngbAccordionButton>Care instructions</button>
+                </h3>
+                <div ngbAccordionCollapse>
+                  <div ngbAccordionBody>
+                    <p>
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck
+                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin
+                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                      helvetica. Ad vegan excepteur butcher vice lomo. Leggings
+                      occaecat craft beer farm-to-table, raw denim aesthetic
+                      synth nesciunt you probably haven't heard of them
+                      accusamus labore sustainable VHS.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div ngbAccordionItem>
+                <h3 ngbAccordionHeader>
+                  <button ngbAccordionButton>Why my order got cancel?</button>
+                </h3>
+                <div ngbAccordionCollapse>
+                  <div ngbAccordionBody>
+                    <p>
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck
+                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin
+                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                      helvetica. Ad vegan excepteur butcher vice lomo. Leggings
+                      occaecat craft beer farm-to-table, raw denim aesthetic
+                      synth nesciunt you probably haven't heard of them
+                      accusamus labore sustainable VHS.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <section id="comments" class="py-5">
+    <app-comment-list
+      [comments]="product.comments"
+      [avgRating]="product.rating"
+    ></app-comment-list>
   </section>
 </div>

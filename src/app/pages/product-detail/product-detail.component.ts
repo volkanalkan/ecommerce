@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from '../../models/product.model';
-// import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-product-detail',
@@ -13,11 +13,11 @@ export class ProductDetailComponent {
   );
   product: Product = new Product(
     'nl23nlk43n5l',
-    'Product Name',
+    'Product Name - Lorem ipsum, dolor sit amet consectetur adipisicing elit',
     'HP',
     4.5,
     261,
-    19.99,
+    219.99,
     [
       'https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg',
     ],
@@ -26,8 +26,8 @@ export class ProductDetailComponent {
     []
   );
 
-  // constructor(carouselConfig: NgbCarouselConfig) {
-  //   carouselConfig.interval = 0;
-  //   carouselConfig.wrap = false;
-  // }
+  constructor(carouselConfig: NgbCarouselConfig) {
+    carouselConfig.interval = 0;
+    carouselConfig.wrap = false;
+  }
 }

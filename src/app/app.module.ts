@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { SaleComponent } from './pages/sale/sale.component';
+import { CommentListComponent } from './components/comment-list/comment-list.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -26,6 +27,7 @@ import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap'; //it sh
     ProductListComponent,
     ProductItemComponent,
     ProductDetailComponent,
+    CommentListComponent,
   ],
   imports: [
     BrowserModule,

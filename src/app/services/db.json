@@ -1,0 +1,112 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "product name1",
+      "brand": "brand name",
+      "rating": 4.3,
+      "ratingCount": 842,
+      "price": 218.99,
+      "imagePathArr": [
+        "https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg"
+      ],
+      "details": "Loremklnfdklg",
+      "commentCount": 120
+    },
+    {
+      "id": "2",
+      "name": "product name2",
+      "brand": "brand name",
+      "rating": 4.3,
+      "ratingCount": 842,
+      "price": 218.99,
+      "imagePathArr": [
+        "https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg"
+      ],
+      "details": "Loremklnfdklg",
+      "commentCount": 120
+    },
+    {
+      "id": "3",
+      "name": "product name3",
+      "brand": "brand name",
+      "rating": 4.3,
+      "ratingCount": 842,
+      "price": 218.99,
+      "imagePathArr": [
+        "https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg"
+      ],
+      "details": "Loremklnfdklg",
+      "commentCount": 120
+    },
+    {
+      "id": "4",
+      "name": "product name4",
+      "brand": "brand name",
+      "rating": 4.3,
+      "ratingCount": 842,
+      "price": 218.99,
+      "imagePathArr": [
+        "https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg"
+      ],
+      "details": "Loremklnfdklg",
+      "commentCount": 120
+    },
+    {
+      "id": "5",
+      "name": "product name5",
+      "brand": "brand name",
+      "rating": 4.3,
+      "ratingCount": 842,
+      "price": 218.99,
+      "imagePathArr": [
+        "https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg"
+      ],
+      "details": "Loremklnfdklg",
+      "commentCount": 120
+    },
+    {
+      "id": "6",
+      "name": "product name6",
+      "brand": "brand name",
+      "rating": 4.3,
+      "ratingCount": 842,
+      "price": 218.99,
+      "imagePathArr": [
+        "https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg"
+      ],
+      "details": "Loremklnfdklg",
+      "commentCount": 120
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "personName": "name",
+      "rating": 4.3,
+      "commentTitle": "commenttitle",
+      "commentBody": "ngflngklfdnglkfdngfd"
+    },
+    {
+      "id": "2",
+      "personName": "name",
+      "rating": 4.3,
+      "commentTitle": "commenttitle",
+      "commentBody": "ngflngklfdnglkfdngfd"
+    },
+    {
+      "id": "3",
+      "personName": "name",
+      "rating": 4.3,
+      "commentTitle": "commenttitle",
+      "commentBody": "ngflngklfdnglkfdngfd"
+    },
+    {
+      "id": "4",
+      "personName": "name",
+      "rating": 4.3,
+      "commentTitle": "commenttitle",
+      "commentBody": "ngflngklfdnglkfdngfd"
+    }
+  ]
+}

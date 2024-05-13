@@ -26,24 +26,28 @@ export class ProductDetailComponent {
     37,
     [
       new Comment(
+        1,
         'person name',
         5,
         'fantastic',
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro libero qui voluptas repudiandae placeat in quidem praesentium expedita molestias incidunt, a sequi non.'
       ),
       new Comment(
+        2,
         'person name',
         2.2,
         'fantastic',
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro libero qui voluptas repudiandae placeat in quidem praesentium expedita molestias incidunt, a sequi non.'
       ),
       new Comment(
+        3,
         'person name',
         0,
         'fantastic',
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro libero qui voluptas repudiandae placeat in quidem praesentium expedita molestias incidunt, a sequi non.'
       ),
       new Comment(
+        4,
         'person name',
         1,
         'fantastic',

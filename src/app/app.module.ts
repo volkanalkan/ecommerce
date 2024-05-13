@@ -11,7 +11,11 @@ import { CartComponent } from './pages/cart/cart.component';
 import { SaleComponent } from './pages/sale/sale.component';
 import { CommentListComponent } from './components/comment-list/comment-list.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import {
+  HttpClientModule,
+  provideHttpClient,
+  withFetch,
+} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
@@ -35,8 +39,9 @@ import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap'; //it sh
     FormsModule,
     NgbModule,
     NgbRatingModule,
+    HttpClientModule,
   ],
-  providers: [provideClientHydration()],
+  providers: [provideClientHydration(), provideHttpClient(withFetch())],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

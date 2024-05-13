@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
+import { DataStorageService } from '../../services/data-storage.service';
 
 @Component({
   selector: 'app-product-list',
@@ -10,9 +11,13 @@ import { ProductService } from '../../services/product.service';
 export class ProductListComponent {
   products: Array<Product>;
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private productService: ProductService,
+    private dataStorageService: DataStorageService
+  ) {}
 
   ngOnInit(): void {
+    this.dataStorageService.fetchProducts();
     this.products = this.productService.getProducts();
   }
 }

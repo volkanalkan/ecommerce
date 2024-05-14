@@ -20,7 +20,9 @@ import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
-import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap'; //it should be both of them
+import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component'; //it should be both of them
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap'; //it sh
     ProductItemComponent,
     ProductDetailComponent,
     CommentListComponent,
+    NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

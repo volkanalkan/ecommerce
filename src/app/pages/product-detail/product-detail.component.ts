@@ -1,63 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '../../models/product.model';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Comment } from '../../models/comment.model';
+import { ProductService } from '../../services/product.service';
+import { ActivatedRoute, Params } from '@angular/router';
+import { CommentService } from '../../services/comment.service';
 
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css',
 })
-export class ProductDetailComponent {
-  images = [944, 1011, 984, 5].map(
-    (n) => `https://picsum.photos/id/${n}/900/500`
-  );
-  product: Product = new Product(
-    'nl23nlk43n5l',
-    'Product Name - Lorem ipsum, dolor sit amet consectetur adipisicing elit',
-    'HP',
-    4.5,
-    261,
-    219.99,
-    [
-      'https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg',
-    ],
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro libero qui voluptas repudiandae placeat in quidem praesentium expedita molestias incidunt, a sequi non. Incidunt eligendi eius velit sunt accusamus non!',
-    37,
-    [
-      new Comment(
-        1,
-        'person name',
-        5,
-        'fantastic',
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro libero qui voluptas repudiandae placeat in quidem praesentium expedita molestias incidunt, a sequi non.'
-      ),
-      new Comment(
-        2,
-        'person name',
-        2.2,
-        'fantastic',
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro libero qui voluptas repudiandae placeat in quidem praesentium expedita molestias incidunt, a sequi non.'
-      ),
-      new Comment(
-        3,
-        'person name',
-        0,
-        'fantastic',
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro libero qui voluptas repudiandae placeat in quidem praesentium expedita molestias incidunt, a sequi non.'
-      ),
-      new Comment(
-        4,
-        'person name',
-        1,
-        'fantastic',
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro libero qui voluptas repudiandae placeat in quidem praesentium expedita molestias incidunt, a sequi non.'
-      ),
-    ]
-  );
+export class ProductDetailComponent implements OnInit {
+  product: Product;
+  comments: Array<Comment>;
+  id: number;
 
-  constructor(carouselConfig: NgbCarouselConfig) {
+  constructor(
+    carouselConfig: NgbCarouselConfig,
+    private productService: ProductService,
+    private commentService: CommentService,
+    private route: ActivatedRoute
+  ) {
     carouselConfig.interval = 0;
     carouselConfig.wrap = false;
+  }
+
+  ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+      this.id = +params['id'];
+      this.product = this.productService.getProduct(this.id - 1);
+      this.comments = this.commentService.getCommentsForProduct(this.id);
+    });
   }
 }

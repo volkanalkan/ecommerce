@@ -20,11 +20,16 @@ import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
-import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import {
+  NgbAccordionModule,
+  NgbCarouselModule,
+  NgbModule,
+  NgbRatingModule,
+} from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
-import { CategoryComponent } from './pages/category/category.component'; //it should be both of them
+import { CategoryComponent } from './pages/category/category.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +53,8 @@ import { CategoryComponent } from './pages/category/category.component'; //it sh
     NgbModule,
     NgbRatingModule,
     HttpClientModule,
+    NgbCarouselModule,
+    NgbAccordionModule,
   ],
   providers: [provideClientHydration(), provideHttpClient(withFetch())],
   bootstrap: [AppComponent],

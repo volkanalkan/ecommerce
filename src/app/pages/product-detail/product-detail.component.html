@@ -21,23 +21,28 @@
   </nav>
   <div
     class="row py-3 gx-5"
-    style="background-color: blanchedalmond; border-radius: 8px"
+    style="background-color: #f2f2f2; border-radius: 8px"
   >
     <div class="col-lg-7">
       <ngb-carousel>
-        @if (images.length < 1) {
+        @if (product.imagePathArr.length < 1) {
         <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
+          <div class="d-flex justify-content-center">
             <img
               src="https://comfortel.com.au/wp-content/uploads/2017/04/none-icon.png"
               alt="Random first slide"
             />
           </div>
         </ng-template>
-        } @else { @for (item of images; track $index) {
+        } @else { @for (item of product.imagePathArr; track $index) {
         <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="item" alt="Random first slide" style="height: 400px" />
+          <div class="d-flex justify-content-center">
+            <img
+              [src]="item"
+              alt="Random first slide"
+              style="height: 400px"
+              class="mx-auto"
+            />
           </div>
         </ng-template>
         } }
@@ -308,7 +313,7 @@
   </div>
   <section id="comments" class="py-5">
     <app-comment-list
-      [comments]="product.comments"
+      [comments]="comments"
       [avgRating]="product.rating"
     ></app-comment-list>
   </section>

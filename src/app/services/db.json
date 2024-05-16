@@ -21,7 +21,9 @@
       "ratingCount": 842,
       "price": 218.99,
       "imagePathArr": [
-        "https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg"
+        "https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg",
+        "https://www.digitaltrends.com/wp-content/uploads/2023/07/clx-hathor-review-11.jpg?fit=720%2C480&p=1",
+        "https://pckumar.in/wp-content/uploads/2022/08/custom-pc-bangalore-e1659900405493-1024x525.jpeg"
       ],
       "details": "Loremklnfdklg",
       "commentCount": 120
@@ -81,28 +83,56 @@
   ],
   "comments": [
     {
-      "id": "1",
+      "productId": "1",
+      "commentId": "1",
       "personName": "name",
       "rating": 4.3,
       "commentTitle": "commenttitle",
       "commentBody": "ngflngklfdnglkfdngfd"
     },
     {
-      "id": "2",
+      "productId": "2",
+      "commentId": "2",
       "personName": "name",
       "rating": 4.3,
       "commentTitle": "commenttitle",
       "commentBody": "ngflngklfdnglkfdngfd"
     },
     {
-      "id": "3",
+      "productId": "2",
+      "commentId": "2",
       "personName": "name",
       "rating": 4.3,
       "commentTitle": "commenttitle",
       "commentBody": "ngflngklfdnglkfdngfd"
     },
     {
-      "id": "4",
+      "productId": "2",
+      "commentId": "2",
+      "personName": "name",
+      "rating": 4.3,
+      "commentTitle": "commenttitle",
+      "commentBody": "ngflngklfdnglkfdngfd"
+    },
+    {
+      "productId": "2",
+      "commentId": "2",
+      "personName": "name",
+      "rating": 4.3,
+      "commentTitle": "commenttitle",
+      "commentBody": "ngflngklfdnglkfdngfd"
+    },
+    {
+      "productId": "3",
+      "commentId": "3",
+      "personName": "name",
+      "rating": 4.3,
+      "commentTitle": "commenttitle",
+      "commentBody": "ngflngklfdnglkfdngfd"
+    },
+    {
+      "productId": "4",
+      "commentId": "4",
       "personName": "name",
       "rating": 4.3,
       "commentTitle": "commenttitle",

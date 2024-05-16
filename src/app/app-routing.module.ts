@@ -6,6 +6,8 @@ import { SaleComponent } from './pages/sale/sale.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { CategoryComponent } from './pages/category/category.component';
+import { ProductResolverService } from './services/product-resolver.service';
+import { CommentResolverService } from './services/comment-resolver.service';
 
 const routes: Routes = [
   {
@@ -29,10 +31,12 @@ const routes: Routes = [
   {
     path: 'product',
     redirectTo: '/category',
+    pathMatch: 'full',
   },
   {
     path: 'product/:id',
     component: ProductDetailComponent,
+    resolve: [ProductResolverService, CommentResolverService],
   },
 ];
 

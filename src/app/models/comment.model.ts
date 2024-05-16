@@ -1,18 +1,14 @@
 export class Comment {
-  public id: number;
-  public personName: string;
-  public rating: number;
-  public commentTitle: string;
-  public commentBody: string;
-
   constructor(
-    id: number,
-    personName: string,
-    rating: number,
-    commentTitle: string,
-    commentBody: string
+    public productId: number,
+    public commentId: number,
+    public personName: string,
+    public rating: number,
+    public commentTitle: string,
+    public commentBody: string
   ) {
-    this.id = id;
+    this.productId = productId;
+    this.commentId = commentId;
     this.personName = personName;
     this.rating = rating;
     this.commentTitle = commentTitle;

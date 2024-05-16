@@ -4,15 +4,19 @@ import { HomeComponent } from './pages/home/home.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { SaleComponent } from './pages/sale/sale.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
+import { CategoryComponent } from './pages/category/category.component';
 
 const routes: Routes = [
   {
-    path: '**',
+    path: '',
     component: HomeComponent,
+    pathMatch: 'full',
   },
   {
-    path: 'products',
-    component: HomeComponent,
+    path: 'category',
+    component: CategoriesComponent,
+    children: [{ path: ':id', component: CategoryComponent }],
   },
   {
     path: 'cart',
@@ -22,10 +26,14 @@ const routes: Routes = [
     path: 'sale',
     component: SaleComponent,
   },
-  // {
-  //   path: 'product/'
-  //   component: ProductDetailComponent
-  // }
+  {
+    path: 'product',
+    redirectTo: '/category',
+  },
+  {
+    path: 'product/:id',
+    component: ProductDetailComponent,
+  },
 ];
 
 @NgModule({

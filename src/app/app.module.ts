@@ -22,7 +22,9 @@ import { ProductItemComponent } from './components/product-item/product-item.com
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component'; //it should be both of them
+import { FooterComponent } from './components/footer/footer.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
+import { CategoryComponent } from './pages/category/category.component'; //it should be both of them
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { FooterComponent } from './components/footer/footer.component'; //it sho
     CommentListComponent,
     NavbarComponent,
     FooterComponent,
+    CategoriesComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,13 +8,11 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { ProductResolverService } from './services/product-resolver.service';
 import { CommentResolverService } from './services/comment-resolver.service';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-    pathMatch: 'full',
-  },
+  { path: 'home', component: HomeComponent },
   {
     path: 'category',
     component: CategoriesComponent,
@@ -38,6 +36,9 @@ const routes: Routes = [
     component: ProductDetailComponent,
     resolve: [ProductResolverService, CommentResolverService],
   },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({

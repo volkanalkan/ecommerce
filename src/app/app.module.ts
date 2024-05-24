@@ -31,6 +31,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { CategoryComponent } from './pages/category/category.component';
 
+import { environment } from '../environments/environment';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +51,8 @@ import { CategoryComponent } from './pages/category/category.component';
     FooterComponent,
     CategoriesComponent,
     CategoryComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +64,12 @@ import { CategoryComponent } from './pages/category/category.component';
     NgbCarouselModule,
     NgbAccordionModule,
   ],
-  providers: [provideClientHydration(), provideHttpClient(withFetch())],
+  providers: [
+    provideClientHydration(),
+    provideHttpClient(withFetch()),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

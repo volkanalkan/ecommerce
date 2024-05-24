@@ -1,0 +1,38 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e3e4;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #9e18b8;
+  border-color: #9e18b8;
+}
+
+.btn-primary:hover {
+  background-color: #7e148f;
+  border-color: #7e148f;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-center a {
+  color: #9e18b8;
+}
+
+.text-center a:hover {
+  color: #7e148f;
+}

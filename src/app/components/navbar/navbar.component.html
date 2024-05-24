@@ -1,150 +1,103 @@
 <header>
-  <!-- NavBar -->
   <nav
     class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-top"
   >
     <div class="container">
       <a class="navbar-brand fs-2 fw-bold" href="#">
-        <span class="textBlur">O/</span></a
-      >
+        <span class="textBlur">O/</span>
+      </a>
       <button
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <!--Toggle  -->
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Nav Items -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-          <li class="nav-item dropdown">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
             <a
-              class="nav-link dropdown-toggle fw-semibold text-uppercase me-1"
+              class="nav-link text-uppercase fw-semibold"
               href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="color: #9e18b8"
+              style="color: black"
+              >Home</a
             >
-              home
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Option</a></li>
-              <li><a class="dropdown-item" href="#">Option</a></li>
-
-              <li><a class="dropdown-item" href="#">Option</a></li>
-            </ul>
           </li>
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle redHover fw-semibold text-uppercase text-black me-1"
+              class="nav-link dropdown-toggle text-uppercase fw-semibold"
               href="#"
-              id="navbarDropdown"
+              id="categoriesDropdown"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
+              style="color: black"
             >
-              pages
+              Categories
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Option</a></li>
-              <li><a class="dropdown-item" href="#">Option</a></li>
-
-              <li><a class="dropdown-item" href="#">Option</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle fw-semibold text-uppercase text-black me-1"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              product
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Option</a></li>
-              <li><a class="dropdown-item" href="#">Option</a></li>
-
-              <li><a class="dropdown-item" href="#">Option</a></li>
-            </ul>
-          </li>
-          <li
-            class="nav-item dropdown fw-semibold text-uppercase text-black me-1"
-          >
-            <a
-              class="nav-link dropdown-toggle fw-semibold text-uppercase text-black me-1"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              blog
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Option</a></li>
-              <li><a class="dropdown-item" href="#">Option</a></li>
-
-              <li><a class="dropdown-item" href="#">Option</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle fw-semibold text-uppercase text-black me-1"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              shop
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Option</a></li>
-              <li><a class="dropdown-item" href="#">Option</a></li>
-
-              <li><a class="dropdown-item" href="#">Option</a></li>
+            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+              <li><a class="dropdown-item" href="#">Option 1</a></li>
+              <li><a class="dropdown-item" href="#">Option 2</a></li>
+              <li><a class="dropdown-item" href="#">Option 3</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a
-              class="nav-link fw-semibold text-uppercase text-black me-1"
+              class="nav-link text-uppercase fw-semibold"
               href="#"
-              >Contact us</a
+              style="color: black"
+              >Blog</a
             >
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link"
-              ><i class="fa fa-search fs-5" style="color: #0c0d0d"></i
-            ></a>
-          </li>
-          <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle cart fw-semibold text-uppercase text-black me-1"
+              class="nav-link text-uppercase fw-semibold"
               href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+              style="color: black"
+              >FAQ</a
             >
-              <i class="fa fa-shopping-cart" style="color: #202122"></i>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-uppercase fw-semibold"
+              href="#"
+              style="color: black"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link position-relative me-3" href="#">
+              <i class="fa fa-heart" style="color: black"></i>
               <span
-                class="position-absolute translate-middle badge rounded-pill"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
                 style="background-color: #9e18b8"
+                >0</span
               >
-                2
-                <!-- It will be something like {{ cartProducts.length }} instead of 2 -->
-                <span class="visually-hidden">unread messages</span>
-              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link position-relative me-3" href="#">
+              <i class="fa fa-shopping-cart" style="color: black"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                style="background-color: #9e18b8"
+                >0</span
+              >
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="btn btn-outline-dark"
+              routerLink="/login"
+              style="color: black; transition: all 0.3s"
+            >
+              <i class="fa fa-user"></i> Login
             </a>
           </li>
         </ul>

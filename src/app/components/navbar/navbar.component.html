@@ -91,15 +91,45 @@
               >
             </a>
           </li>
-          <li class="nav-item">
-            <a
-              class="btn btn-outline-dark"
-              routerLink="/login"
-              style="color: black; transition: all 0.3s"
-            >
-              <i class="fa fa-user"></i> Login
-            </a>
-          </li>
+          <ng-container *ngIf="user$ | async as user; else showLogin">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="userDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="color: black"
+              >
+                <i class="fa fa-user"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">{{
+                    user.email | emailUsername
+                  }}</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" (click)="logout()" href="#"
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ng-container>
+          <ng-template #showLogin>
+            <li class="nav-item">
+              <a
+                class="btn btn-outline-dark"
+                routerLink="/login"
+                style="color: black; transition: all 0.3s"
+              >
+                <i class="fa fa-user"></i> Login
+              </a>
+            </li>
+          </ng-template>
         </ul>
       </div>
     </div>

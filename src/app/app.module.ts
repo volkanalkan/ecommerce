@@ -36,6 +36,7 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { EmailUsernamePipe } from './email-username.pipe';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { RegisterComponent } from './pages/register/register.component';
     CategoryComponent,
     LoginComponent,
     RegisterComponent,
+    EmailUsernamePipe,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,133 @@
-<p>category works!</p>
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="category-title text-center my-5">
+        <h1 class="display-1">{{ categoryName }}</h1>
+      </div>
+    </div>
+    <div class="col-3">
+      <ul class="list-group mx-4">
+        <li class="list-group-item">{{ products.length }} items listed</li>
+        <li class="list-group-item">
+          <strong>Brands</strong>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder=""
+              aria-label="Brand Name"
+              aria-describedby="button-addon2"
+            />
+            <button class="btn btn-primary" type="button" id="button-addon2">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+          @for (brand of brands; track $index) {
+          <div class="">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              [id]="$index"
+            />
+            <label class="form-check-label ms-2" [for]="$index">
+              {{ brand }}</label
+            >
+          </div>
+          }
+        </li>
+        <li class="list-group-item">
+          <strong>Price Range</strong>
+          <div class="input-group my-3">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Min"
+              aria-label="minimum price"
+              min="0"
+              max="999999"
+            />
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Max"
+              aria-label="maximum price"
+              min="0"
+              max="999999"
+            />
+            <button class="btn btn-primary" type="button" id="button-addon2">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="onSale"
+            />
+            <label class="form-check-label" for="onSale"
+              >Products on sale</label
+            >
+          </div>
+        </li>
+        <li class="list-group-item">
+          <strong>Rating</strong>
+          <div class="form-check mt-3">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="four"
+            />
+            <label class="form-check-label" for="four"
+              ><i class="bi bi-star-fill" style="color: #faa528"></i>
+              4.0 and up
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="three"
+            />
+            <label class="form-check-label" for="three"
+              ><i class="bi bi-star-fill" style="color: #faa528"></i>
+              3.0 and up
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="two"
+            />
+            <label class="form-check-label" for="two"
+              ><i class="bi bi-star-fill" style="color: #faa528"></i>
+              2.0 and up
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="one"
+            />
+            <label class="form-check-label" for="one"
+              ><i class="bi bi-star-fill" style="color: #faa528"></i>
+              1.0 and up
+            </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-9">
+      <app-product-list [products]="products"></app-product-list>
+    </div>
+  </div>
+</div>

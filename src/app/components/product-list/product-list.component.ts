@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
 import { DataStorageService } from '../../services/data-storage.service';
@@ -9,7 +9,7 @@ import { DataStorageService } from '../../services/data-storage.service';
   styleUrl: './product-list.component.css',
 })
 export class ProductListComponent {
-  products: Array<Product>;
+  @Input('products') products: Array<Product>;
 
   constructor(
     private productService: ProductService,
@@ -17,7 +17,7 @@ export class ProductListComponent {
   ) {}
 
   ngOnInit(): void {
-    this.dataStorageService.fetchProducts();
-    this.products = this.productService.getProducts();
+    // this.dataStorageService.fetchProducts();
+    // this.products = this.productService.getProducts();
   }
 }

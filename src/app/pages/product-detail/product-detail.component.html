@@ -4,19 +4,13 @@
       <li class="breadcrumb-item">
         <a href="#"><small class="text-body-secondary">Home</small></a>
       </li>
+      @for (category of categoryPath; track $index) {
       <li class="breadcrumb-item">
-        <a href="#"><small class="text-body-secondary">Electronics</small></a>
-      </li>
-      <li class="breadcrumb-item">
-        <a href="#"
-          ><small class="text-body-secondary">Computers & Accessories</small></a
+        <a (click)="onCategoryPath(category)" style="cursor: pointer"
+          ><small class="text-body-secondary">{{ category }}</small></a
         >
       </li>
-      <li class="breadcrumb-item active" aria-current="page">
-        <a href="#"
-          ><small class="text-body-secondary"> Computers & Tablets</small></a
-        >
-      </li>
+      }
     </ol>
   </nav>
   <div

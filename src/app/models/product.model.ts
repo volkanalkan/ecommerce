@@ -8,7 +8,8 @@ export class Product {
     public price: number,
     public imagePathArr: Array<string>,
     public details: string,
-    public commentCount: number
+    public commentCount: number,
+    public category: string
   ) {
     this.id = id;
     this.name = name;
@@ -19,5 +20,6 @@ export class Product {
     this.imagePathArr = imagePathArr;
     this.details = details;
     this.commentCount = commentCount;
+    this.category = category;
   }
 }

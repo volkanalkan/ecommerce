@@ -22,4 +22,10 @@ export class ProductService {
   getProduct(id: number) {
     return this.products[id];
   }
+
+  getProductsbyCategory(category: string) {
+    return this.products
+      .slice()
+      .filter((product) => product.category.split(' > ').includes(category));
+  }
 }

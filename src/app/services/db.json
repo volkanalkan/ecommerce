@@ -11,7 +11,8 @@
         "https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg"
       ],
       "details": "Loremklnfdklg",
-      "commentCount": 120
+      "commentCount": 120,
+      "category": "Books > Science Fiction"
     },
     {
       "id": "2",
@@ -26,7 +27,8 @@
         "https://pckumar.in/wp-content/uploads/2022/08/custom-pc-bangalore-e1659900405493-1024x525.jpeg"
       ],
       "details": "Loremklnfdklg",
-      "commentCount": 120
+      "commentCount": 120,
+      "category": "Electronics > Tablets > iOS"
     },
     {
       "id": "3",
@@ -39,7 +41,8 @@
         "https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg"
       ],
       "details": "Loremklnfdklg",
-      "commentCount": 120
+      "commentCount": 120,
+      "category": "Clothing > Men's > Shirts"
     },
     {
       "id": "4",
@@ -52,7 +55,8 @@
         "https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg"
       ],
       "details": "Loremklnfdklg",
-      "commentCount": 120
+      "commentCount": 120,
+      "category": "Home & Kitchen > Kitchen Appliances > Small Appliances"
     },
     {
       "id": "5",
@@ -65,7 +69,8 @@
         "https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg"
       ],
       "details": "Loremklnfdklg",
-      "commentCount": 120
+      "commentCount": 120,
+      "category": "Sports & Outdoors > Fitness > Gym Equipment"
     },
     {
       "id": "6",
@@ -78,7 +83,536 @@
         "https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg"
       ],
       "details": "Loremklnfdklg",
-      "commentCount": 120
+      "commentCount": 120,
+      "category": "Electronics > Smartphones > Android"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics",
+      "children": [
+        {
+          "id": 2,
+          "name": "Smartphones",
+          "children": [
+            {
+              "id": 3,
+              "name": "Android"
+            },
+            {
+              "id": 4,
+              "name": "iOS"
+            },
+            {
+              "id": 5,
+              "name": "Windows Phone"
+            },
+            {
+              "id": 79,
+              "name": "Refurbished Phones"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "Laptops",
+          "children": [
+            {
+              "id": 7,
+              "name": "Windows"
+            },
+            {
+              "id": 8,
+              "name": "Mac"
+            },
+            {
+              "id": 9,
+              "name": "Chromebooks"
+            },
+            {
+              "id": 84,
+              "name": "Gaming Laptops"
+            },
+            {
+              "id": 85,
+              "name": "2-in-1 Laptops"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "Tablets",
+          "children": [
+            {
+              "id": 11,
+              "name": "Android"
+            },
+            {
+              "id": 12,
+              "name": "iOS"
+            },
+            {
+              "id": 13,
+              "name": "Windows"
+            },
+            {
+              "id": 86,
+              "name": "E-Readers"
+            },
+            {
+              "id": 87,
+              "name": "Kids' Tablets"
+            }
+          ]
+        },
+        {
+          "id": 80,
+          "name": "Accessories",
+          "children": [
+            {
+              "id": 81,
+              "name": "Cases & Covers"
+            },
+            {
+              "id": 82,
+              "name": "Screen Protectors"
+            },
+            {
+              "id": 83,
+              "name": "Chargers & Cables"
+            }
+          ]
+        },
+        {
+          "id": 118,
+          "name": "Cameras & Photography"
+        },
+        {
+          "id": 119,
+          "name": "Audio & Sound Systems"
+        },
+        {
+          "id": 120,
+          "name": "Wearable Technology"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Clothing",
+      "children": [
+        {
+          "id": 15,
+          "name": "Men's",
+          "children": [
+            {
+              "id": 16,
+              "name": "Shirts"
+            },
+            {
+              "id": 17,
+              "name": "Trousers"
+            },
+            {
+              "id": 18,
+              "name": "Jackets"
+            },
+            {
+              "id": 88,
+              "name": "Suits"
+            },
+            {
+              "id": 89,
+              "name": "Activewear"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "Women's",
+          "children": [
+            {
+              "id": 20,
+              "name": "Dresses"
+            },
+            {
+              "id": 21,
+              "name": "Skirts"
+            },
+            {
+              "id": 22,
+              "name": "Tops"
+            },
+            {
+              "id": 90,
+              "name": "Maternity"
+            },
+            {
+              "id": 91,
+              "name": "Swimwear"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "Kids",
+          "children": [
+            {
+              "id": 24,
+              "name": "Boys"
+            },
+            {
+              "id": 25,
+              "name": "Girls"
+            },
+            {
+              "id": 26,
+              "name": "Infants"
+            },
+            {
+              "id": 92,
+              "name": "School Uniforms"
+            },
+            {
+              "id": 93,
+              "name": "Costumes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Home & Kitchen",
+      "children": [
+        {
+          "id": 28,
+          "name": "Kitchen Appliances",
+          "children": [
+            {
+              "id": 29,
+              "name": "Cookware"
+            },
+            {
+              "id": 30,
+              "name": "Utensils"
+            },
+            {
+              "id": 31,
+              "name": "Small Appliances"
+            },
+            {
+              "id": 94,
+              "name": "Coffee & Tea Makers"
+            },
+            {
+              "id": 95,
+              "name": "Food Processors"
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "Furniture",
+          "children": [
+            {
+              "id": 33,
+              "name": "Living Room"
+            },
+            {
+              "id": 34,
+              "name": "Bedroom"
+            },
+            {
+              "id": 35,
+              "name": "Kitchen & Dining"
+            },
+            {
+              "id": 96,
+              "name": "Office Furniture"
+            },
+            {
+              "id": 97,
+              "name": "Outdoor Furniture"
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "name": "Home Decor",
+          "children": [
+            {
+              "id": 37,
+              "name": "Wall Art"
+            },
+            {
+              "id": 38,
+              "name": "Mirrors"
+            },
+            {
+              "id": 39,
+              "name": "Decorative Pillows"
+            },
+            {
+              "id": 98,
+              "name": "Candles & Holders"
+            },
+            {
+              "id": 99,
+              "name": "Clocks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Books",
+      "children": [
+        {
+          "id": 41,
+          "name": "Fiction"
+        },
+        {
+          "id": 42,
+          "name": "Non-Fiction"
+        },
+        {
+          "id": 43,
+          "name": "Science Fiction"
+        },
+        {
+          "id": 100,
+          "name": "Children's Books"
+        },
+        {
+          "id": 101,
+          "name": "Poetry"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Sports & Outdoors",
+      "children": [
+        {
+          "id": 45,
+          "name": "Fitness",
+          "children": [
+            {
+              "id": 46,
+              "name": "Gym Equipment"
+            },
+            {
+              "id": 47,
+              "name": "Yoga & Pilates"
+            },
+            {
+              "id": 48,
+              "name": "Running"
+            },
+            {
+              "id": 102,
+              "name": "Home Gyms"
+            },
+            {
+              "id": 103,
+              "name": "Strength Training"
+            }
+          ]
+        },
+        {
+          "id": 49,
+          "name": "Outdoor Recreation",
+          "children": [
+            {
+              "id": 50,
+              "name": "Camping & Hiking"
+            },
+            {
+              "id": 51,
+              "name": "Fishing"
+            },
+            {
+              "id": 52,
+              "name": "Cycling"
+            },
+            {
+              "id": 104,
+              "name": "Boating & Water Sports"
+            },
+            {
+              "id": 105,
+              "name": "Hunting"
+            }
+          ]
+        },
+        {
+          "id": 53,
+          "name": "Team Sports",
+          "children": [
+            {
+              "id": 54,
+              "name": "Football"
+            },
+            {
+              "id": 55,
+              "name": "Basketball"
+            },
+            {
+              "id": 56,
+              "name": "Soccer"
+            },
+            {
+              "id": 106,
+              "name": "Baseball & Softball"
+            },
+            {
+              "id": 107,
+              "name": "Volleyball"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Beauty & Personal Care",
+      "children": [
+        {
+          "id": 58,
+          "name": "Skincare"
+        },
+        {
+          "id": 59,
+          "name": "Haircare"
+        },
+        {
+          "id": 60,
+          "name": "Makeup"
+        },
+        {
+          "id": 108,
+          "name": "Fragrance"
+        },
+        {
+          "id": 109,
+          "name": "Bath & Body"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "Toys & Games",
+      "children": [
+        {
+          "id": 62,
+          "name": "Action Figures"
+        },
+        {
+          "id": 63,
+          "name": "Board Games"
+        },
+        {
+          "id": 64,
+          "name": "Puzzles"
+        },
+        {
+          "id": 110,
+          "name": "Building Toys"
+        },
+        {
+          "id": 111,
+          "name": "Dolls & Accessories"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "name": "Health & Wellness",
+      "children": [
+        {
+          "id": 66,
+          "name": "Vitamins & Supplements"
+        },
+        {
+          "id": 67,
+          "name": "Fitness Accessories"
+        },
+        {
+          "id": 68,
+          "name": "Health Monitors"
+        },
+        {
+          "id": 112,
+          "name": "Massage & Relaxation"
+        },
+        {
+          "id": 113,
+          "name": "Oral Care"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "name": "Home Improvement",
+      "children": [
+        {
+          "id": 70,
+          "name": "Tools"
+        },
+        {
+          "id": 71,
+          "name": "Lighting"
+        },
+        {
+          "id": 72,
+          "name": "Hardware"
+        },
+        {
+          "id": 73,
+          "name": "Paint & Supplies"
+        },
+        {
+          "id": 114,
+          "name": "Plumbing"
+        },
+        {
+          "id": 115,
+          "name": "Electrical"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "name": "Arts & Crafts",
+      "children": [
+        {
+          "id": 75,
+          "name": "Drawing & Painting"
+        },
+        {
+          "id": 76,
+          "name": "Scrapbooking & Stamping"
+        },
+        {
+          "id": 77,
+          "name": "Sewing & Fabric"
+        },
+        {
+          "id": 78,
+          "name": "Crafting Kits"
+        },
+        {
+          "id": 116,
+          "name": "Knitting & Crochet"
+        },
+        {
+          "id": 117,
+          "name": "Candle Making"
+        }
+      ]
     }
   ],
   "comments": [

@@ -10,13 +10,20 @@ import { ProductResolverService } from './services/product-resolver.service';
 import { CommentResolverService } from './services/comment-resolver.service';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { CategoryResolverService } from './services/category-resolver.service';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   {
     path: 'category',
     component: CategoriesComponent,
-    children: [{ path: ':id', component: CategoryComponent }],
+    resolve: [CategoryResolverService],
+    pathMatch: 'full',
+  },
+  {
+    path: 'category/:name',
+    component: CategoryComponent,
+    resolve: [ProductResolverService],
   },
   {
     path: 'cart',

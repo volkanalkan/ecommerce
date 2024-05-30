@@ -24,6 +24,7 @@ import {
   NgbAccordionModule,
   NgbCarouselModule,
   NgbModule,
+  NgbNavModule,
   NgbRatingModule,
 } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -65,6 +66,7 @@ import { EmailUsernamePipe } from './email-username.pipe';
     HttpClientModule,
     NgbCarouselModule,
     NgbAccordionModule,
+    NgbNavModule,
   ],
   providers: [
     provideClientHydration(),

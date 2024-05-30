@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Product } from '../../models/product.model';
 import { CategoryService } from '../../services/category.service';
 
@@ -12,7 +12,7 @@ import { CategoryService } from '../../services/category.service';
 export class CategoryComponent implements OnInit {
   categoryName: string;
   products: Array<Product>;
-  category: Array<any>;
+  category;
   brands: Array<string> = [
     'LuminaVista',
     'Nexara',
@@ -29,7 +29,8 @@ export class CategoryComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private categoryService: CategoryService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -39,7 +40,10 @@ export class CategoryComponent implements OnInit {
       this.products = this.productService.getProductsbyCategory(
         this.categoryName
       );
-      // this.products = this.productService.getProducts();
     });
+  }
+
+  onCategoryPath(category: string) {
+    this.router.navigate(['/category/', category]);
   }
 }

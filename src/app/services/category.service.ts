@@ -19,13 +19,18 @@ export class CategoryService {
     return this.findCategoryById(this.categories, id);
   }
 
-  private findCategoryById(arr: any[], id: number): any {
+  private findCategoryById(arr: any[], id: number, path: string[] = []): any {
     for (const category of arr) {
+      const currentPath = [...path, category.name];
       if (category.id === id) {
-        return category;
+        return { category, path: currentPath };
       }
       if (category.children) {
-        const result = this.findCategoryById(category.children, id);
+        const result = this.findCategoryById(
+          category.children,
+          id,
+          currentPath
+        );
         if (result) {
           return result;
         }
@@ -38,13 +43,22 @@ export class CategoryService {
     return this.findCategoryByName(this.categories, name);
   }
 
-  private findCategoryByName(arr: any[], name: string): any {
+  private findCategoryByName(
+    arr: any[],
+    name: string,
+    path: string[] = []
+  ): any {
     for (const category of arr) {
+      const currentPath = [...path, category.name];
       if (category.name === name) {
-        return category;
+        return { category, path: currentPath };
       }
       if (category.children) {
-        const result = this.findCategoryByName(category.children, name);
+        const result = this.findCategoryByName(
+          category.children,
+          name,
+          currentPath
+        );
         if (result) {
           return result;
         }

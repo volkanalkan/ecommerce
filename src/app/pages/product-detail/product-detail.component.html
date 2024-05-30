@@ -68,7 +68,11 @@
           </ngb-rating>
           <p>
             &nbsp; {{ product.rating }} •
-            <a href="#comments" rel="noopener noreferrer" style="color: black"
+            <a
+              rel="noopener noreferrer"
+              class="link-secondary"
+              style="cursor: pointer"
+              (click)="scrollToTarget()"
               >{{ product.ratingCount }} ratings</a
             >
           </p>
@@ -91,30 +95,30 @@
             >
           </div>
           <div class="">
-            <div>
-              <div class="input-group">
-                <button
-                  style="width: 2.5rem; padding-left: 0; padding-right: 0"
-                  class="btn btn-decrement btn-secondary btn-minus btn-lg"
-                  type="button"
-                >
-                  <i class="bi bi-dash"></i></button
-                ><input
-                  type="text"
-                  inputmode="decimal"
-                  style="text-align: center; width: 3rem; font-weight: 600"
-                  class="form-control"
-                  value="1"
-                  min="1"
-                  max="30"
-                /><button
-                  style="width: 2.5rem; padding-left: 0; padding-right: 0"
-                  class="btn btn-increment btn-secondary btn-plus btn-lg"
-                  type="button"
-                >
-                  <i class="bi bi-plus"></i>
-                </button>
-              </div>
+            <div class="input-group">
+              <button
+                style="width: 2.5rem; padding-left: 0; padding-right: 0"
+                class="btn btn-decrement btn-secondary btn-minus btn-lg"
+                type="button"
+                (click)="decrement()"
+              >
+                <i class="bi bi-dash"></i></button
+              ><input
+                type="number"
+                style="text-align: center; width: 3rem; font-weight: 600"
+                class="form-control"
+                min="1"
+                max="30"
+                [ngModel]="numberOfProduct"
+                readonly
+              /><button
+                style="width: 2.5rem; padding-left: 0; padding-right: 0"
+                class="btn btn-increment btn-secondary btn-plus btn-lg"
+                type="button"
+                (click)="increment()"
+              >
+                <i class="bi bi-plus"></i>
+              </button>
             </div>
           </div>
         </div>

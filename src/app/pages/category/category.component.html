@@ -1,5 +1,26 @@
 <div class="container mb-5">
   <div class="row">
+    <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <small
+            class="text-body-secondary"
+            routerLink="/home"
+            style="cursor: pointer"
+            >Home</small
+          >
+        </li>
+        @for (category of category.path; track $index) {
+        <li class="breadcrumb-item">
+          <a
+            (click)="onCategoryPath(category)"
+            style="cursor: pointer; text-decoration: none"
+            ><small class="text-body-secondary">{{ category }}</small></a
+          >
+        </li>
+        }
+      </ol>
+    </nav>
     <div class="col-12">
       <div class="category-title text-center my-5">
         <h1 class="display-1">{{ categoryName }}</h1>
@@ -8,6 +29,33 @@
     <div class="col-3">
       <ul class="list-group mx-4">
         <li class="list-group-item">{{ products.length }} items listed</li>
+        @if (category.category.children) {
+        <li class="list-group-item">
+          <strong>Sub Categories</strong>
+          <div class="d-flex align-items-center">
+            <p class="my-auto">{{ categoryName }}</p>
+            <i
+              class="bi bi-caret-down-fill btn"
+              data-bs-toggle="collapse"
+              href="#subs"
+              role="button"
+              aria-expanded="false"
+              aria-controls="subs"
+            ></i>
+          </div>
+          <div class="collapse show ps-3" id="subs">
+            @for (item of category.category.children; track $index) {
+            <p
+              class="my-1"
+              [routerLink]="['/category', item.name]"
+              role="button"
+            >
+              {{ item.name }}
+            </p>
+            }
+          </div>
+        </li>
+        }
         <li class="list-group-item">
           <strong>Brands</strong>
           <div class="input-group mb-3">

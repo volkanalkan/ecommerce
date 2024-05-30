@@ -4,12 +4,14 @@
       <div
         ngbNav
         #nav="ngbNav"
-        class="nav-pills flex-column col-3"
+        class="nav-pills flex-column col-2"
         orientation="vertical"
       >
         @for (category of categories; track $index) {
         <ng-container [ngbNavItem]="category.id">
-          <button ngbNavLink>{{ category.name }}</button>
+          <button ngbNavLink class="text-start">
+            {{ category.name }}
+          </button>
           <ng-template ngbNavContent>
             <div class="d-flex flex-wrap col-8 gap-3">
               @for (item of category.children; track $index) {

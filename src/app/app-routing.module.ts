@@ -13,7 +13,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { CategoryResolverService } from './services/category-resolver.service';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, resolve: [ProductResolverService] },
   {
     path: 'category',
     component: CategoriesComponent,
@@ -23,7 +23,7 @@ const routes: Routes = [
   {
     path: 'category/:name',
     component: CategoryComponent,
-    resolve: [ProductResolverService],
+    resolve: [ProductResolverService, CategoryResolverService],
   },
   {
     path: 'cart',

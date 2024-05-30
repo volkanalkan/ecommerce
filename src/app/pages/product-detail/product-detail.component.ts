@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { Product } from '../../models/product.model';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Comment } from '../../models/comment.model';
@@ -16,13 +16,15 @@ export class ProductDetailComponent implements OnInit {
   comments: Array<Comment>;
   id: number;
   categoryPath: Array<string>;
+  numberOfProduct: number = 1;
 
   constructor(
     carouselConfig: NgbCarouselConfig,
     private productService: ProductService,
     private commentService: CommentService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private elementRef: ElementRef
   ) {
     carouselConfig.interval = 0;
     carouselConfig.wrap = false;
@@ -39,5 +41,23 @@ export class ProductDetailComponent implements OnInit {
 
   onCategoryPath(category: string) {
     this.router.navigate(['/category/', category]);
+  }
+
+  increment() {
+    if (this.numberOfProduct < 30) {
+      this.numberOfProduct++;
+    }
+  }
+
+  decrement() {
+    if (this.numberOfProduct > 1) {
+      this.numberOfProduct--;
+    }
+  }
+
+  scrollToTarget() {
+    const targetElement =
+      this.elementRef.nativeElement.querySelector('#comments');
+    targetElement.scrollIntoView({ behavior: 'smooth' });
   }
 }

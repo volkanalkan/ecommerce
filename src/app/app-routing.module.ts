@@ -11,9 +11,17 @@ import { CommentResolverService } from './services/comment-resolver.service';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { CategoryResolverService } from './services/category-resolver.service';
+import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { FAQComponent } from './pages/faq/faq.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent, resolve: [ProductResolverService] },
+  {
+    path: 'home',
+    component: HomeComponent,
+    resolve: [ProductResolverService, CategoryResolverService],
+  },
   {
     path: 'category',
     component: CategoriesComponent,
@@ -25,9 +33,11 @@ const routes: Routes = [
     component: CategoryComponent,
     resolve: [ProductResolverService, CategoryResolverService],
   },
+  { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
   {
-    path: 'cart',
-    component: CartComponent,
+    path: 'favorites',
+    component: FavoritesComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'sale',
@@ -45,6 +55,8 @@ const routes: Routes = [
   },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'faq', component: FAQComponent },
+  { path: 'contact-us', component: ContactUsComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 

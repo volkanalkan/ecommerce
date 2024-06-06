@@ -1,0 +1,75 @@
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+}
+
+.bg-image {
+  /* background: url("") no-repeat center center; */
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+h2 {
+  color: #333;
+  font-weight: bold;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #9e18b8;
+  border-color: #9e18b8;
+}
+
+.btn-primary:hover {
+  background-color: #871097;
+  border-color: #871097;
+}
+
+.input-group-text {
+  background-color: #9e18b8;
+  color: #fff;
+}
+
+.col-md-6 h5 {
+  color: #9e18b8;
+}
+
+.col-md-6 p {
+  color: #333;
+  font-weight: 500;
+}
+
+.fa-2x {
+  font-size: 1.5em;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-twitter {
+  color: #1da1f2;
+}
+
+.fa-instagram {
+  color: #e1306c;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+}

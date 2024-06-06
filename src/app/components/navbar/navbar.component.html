@@ -40,9 +40,11 @@
               Categories
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-              <li><a class="dropdown-item" href="#">Option 1</a></li>
-              <li><a class="dropdown-item" href="#">Option 2</a></li>
-              <li><a class="dropdown-item" href="#">Option 3</a></li>
+              <li>
+                <a class="dropdown-item" href="#">option 1</a>
+                <a class="dropdown-item" href="#">option 2</a>
+                <a class="dropdown-item" href="#">option 3</a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
@@ -50,14 +52,7 @@
               class="nav-link text-uppercase fw-semibold"
               href="#"
               style="color: black"
-              >Blog</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-uppercase fw-semibold"
-              href="#"
-              style="color: black"
+              routerLink="/faq"
               >FAQ</a
             >
           </li>
@@ -66,13 +61,18 @@
               class="nav-link text-uppercase fw-semibold"
               href="#"
               style="color: black"
+              routerLink="/contact-us"
               >Contact Us</a
             >
           </li>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link position-relative me-3" href="#">
+            <a
+              class="nav-link position-relative me-3"
+              routerLink="/favorites"
+              href="#"
+            >
               <i class="fa fa-heart" style="color: black"></i>
               <span
                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
@@ -82,7 +82,11 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link position-relative me-3" href="#">
+            <a
+              class="nav-link position-relative me-3"
+              routerLink="/cart"
+              href="#"
+            >
               <i class="fa fa-shopping-cart" style="color: black"></i>
               <span
                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill"

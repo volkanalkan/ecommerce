@@ -38,6 +38,9 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { EmailUsernamePipe } from './email-username.pipe';
+import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { FAQComponent } from './pages/faq/faq.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +59,9 @@ import { EmailUsernamePipe } from './email-username.pipe';
     LoginComponent,
     RegisterComponent,
     EmailUsernamePipe,
+    FavoritesComponent,
+    FAQComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,

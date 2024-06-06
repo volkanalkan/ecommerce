@@ -672,5 +672,31 @@
       "commentTitle": "commenttitle",
       "commentBody": "ngflngklfdnglkfdngfd"
     }
+  ],
+  "faq": [
+    {
+      "question": "What is your return policy?",
+      "answer": "Our return policy allows you to return products within 30 days of purchase. Please make sure the products are in their original condition."
+    },
+    {
+      "question": "How do I track my order?",
+      "answer": "You can track your order status by logging into your account and navigating to the 'Orders' section. You will also receive a tracking link via email once your order is shipped."
+    },
+    {
+      "question": "Do you offer international shipping?",
+      "answer": "Yes, we offer international shipping to many countries. Shipping fees and delivery times vary depending on the destination. Please check our shipping policy for more details."
+    },
+    {
+      "question": "What is your return policy?",
+      "answer": "Our return policy allows you to return products within 30 days of purchase. Please make sure the products are in their original condition."
+    },
+    {
+      "question": "How do I track my order?",
+      "answer": "You can track your order status by logging into your account and navigating to the 'Orders' section. You will also receive a tracking link via email once your order is shipped."
+    },
+    {
+      "question": "Do you offer international shipping?",
+      "answer": "Yes, we offer international shipping to many countries. Shipping fees and delivery times vary depending on the destination. Please check our shipping policy for more details."
+    }
   ]
 }

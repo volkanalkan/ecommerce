@@ -1,34 +1,38 @@
 <div class="container py-5">
-  <h2 class="mb-4">Shopping Cart</h2>
+  <h2 class="mb-4">Favorites</h2>
   <div
     *ngIf="!authService.isLoggedIn()"
     class="alert alert-warning"
     role="alert"
   >
-    You must be logged in to view your cart.
+    You must be logged in to view your favorites.
   </div>
   <div *ngIf="authService.isLoggedIn()">
-    <div *ngIf="cartItems.length === 0" class="alert alert-info" role="alert">
-      Your cart is empty.
+    <div
+      *ngIf="favoriteItems.length === 0"
+      class="alert alert-info"
+      role="alert"
+    >
+      Your favorites list is empty.
     </div>
-    <div *ngIf="cartItems.length > 0">
+    <div *ngIf="favoriteItems.length > 0">
       <div class="list-group">
         <div
           class="list-group-item list-group-item-action flex-column align-items-start"
-          *ngFor="let item of cartItems"
+          *ngFor="let item of favoriteItems"
         >
           <div class="d-flex w-100 justify-content-between">
             <img
               [src]="item.imagePathArr[0]"
               alt="{{ item.name }}"
-              class="me-3 cart-img"
+              class="me-3 favorite-img"
             />
             <div class="flex-grow-1 ms-3">
               <h5 class="mb-1">{{ item.name }}</h5>
               <p class="mb-1">${{ item.price }}</p>
               <button
                 class="btn btn-danger btn-sm"
-                (click)="removeFromCart(item.id)"
+                (click)="removeFromFavorites(item.id)"
               >
                 Remove
               </button>
@@ -36,8 +40,8 @@
           </div>
         </div>
       </div>
-      <button class="btn btn-secondary mt-3" (click)="clearCart()">
-        Clear Cart
+      <button class="btn btn-secondary mt-3" (click)="clearFavorites()">
+        Clear Favorites
       </button>
     </div>
   </div>

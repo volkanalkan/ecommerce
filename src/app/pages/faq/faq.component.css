@@ -1,0 +1,45 @@
+.accordion-button {
+  background-color: #fff;
+  color: #333;
+  font-weight: bold;
+}
+
+.accordion-button:hover {
+  background-color: #f1f1f1;
+  color: #9e18b8;
+}
+
+.accordion-button:focus {
+  border-color: #9e18b8;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: #9e18b8;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+
+.accordion-button:not(.collapsed)::after {
+  filter: invert(1);
+}
+
+.accordion-body {
+  background-color: #f9f9f9;
+  border-top: 2px solid #9e18b8;
+}
+
+.container h2 {
+  color: #333;
+  font-weight: bold;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.accordion-item:last-child {
+  margin-bottom: 0;
+}

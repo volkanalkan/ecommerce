@@ -9,9 +9,17 @@ import { User } from 'firebase/auth';
 })
 export class AuthService {
   user$: Observable<User | null>;
+  private currentUser: User | null = null;
 
   constructor(private auth: Auth, private router: Router) {
     this.user$ = authState(this.auth);
+    this.user$.subscribe((user) => {
+      this.currentUser = user;
+    });
+  }
+
+  isLoggedIn(): boolean {
+    return this.currentUser !== null;
   }
 
   logout() {

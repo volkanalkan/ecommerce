@@ -1,0 +1,13 @@
+.account-side-btn {
+  color: black;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.account-side-btn:hover {
+  color: #9e18b8;
+}
+
+.activeLink {
+  color: #9e18b8;
+}

@@ -6,12 +6,5 @@ export class Comment {
     public rating: number,
     public commentTitle: string,
     public commentBody: string
-  ) {
-    this.productId = productId;
-    this.commentId = commentId;
-    this.personName = personName;
-    this.rating = rating;
-    this.commentTitle = commentTitle;
-    this.commentBody = commentBody;
-  }
+  ) {}
 }

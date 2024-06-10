@@ -10,16 +10,5 @@ export class Product {
     public details: string,
     public commentCount: number,
     public category: string
-  ) {
-    this.id = id;
-    this.name = name;
-    this.brand = brand;
-    this.rating = rating;
-    this.ratingCount = ratingCount;
-    this.price = price;
-    this.imagePathArr = imagePathArr;
-    this.details = details;
-    this.commentCount = commentCount;
-    this.category = category;
-  }
+  ) {}
 }

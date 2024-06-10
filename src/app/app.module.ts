@@ -38,6 +38,8 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { EmailUsernamePipe } from './email-username.pipe';
+import { AccountComponent } from './pages/account/account.component';
+import { OrdersComponent } from './pages/orders/orders.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { FAQComponent } from './pages/faq/faq.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
@@ -59,6 +61,8 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
     LoginComponent,
     RegisterComponent,
     EmailUsernamePipe,
+    AccountComponent,
+    OrdersComponent,
     FavoritesComponent,
     FAQComponent,
     ContactUsComponent,

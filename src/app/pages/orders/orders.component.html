@@ -1,0 +1,79 @@
+<div class="d-flex flex-column">
+  @for (item of orders; track $index) {
+  <div class="card">
+    <div class="card-body d-flex flex-row justify-content-between">
+      <div class="d-flex flex-row gap-3">
+        <img
+          src="https://media.wired.com/photos/624df21cb340f55b37084fdc/1:1/w_1544,h_1544,c_limit/How-to-Build-a-PC-Gear.jpg"
+          alt=""
+          class="rounded object-contain"
+          style="height: 200px; width: 200px; cursor: pointer"
+          [routerLink]="['/product', products[$index].id]"
+        />
+        <div class="d-flex flex-column justify-content-between">
+          <div class="">
+            <div
+              class="h5"
+              style="cursor: pointer"
+              [routerLink]="['/product', products[$index].id]"
+            >
+              {{ products[$index].name }}
+            </div>
+            <div class="h5 d-flex">
+              Order Id:
+              <div class="fst-italic">{{ item.orderId }}</div>
+            </div>
+            <p class="text-secondary">{{ item.deliveryDate }}</p>
+            <p class="text-secondary-emphasis fw-semibold">
+              $
+              {{ products[$index].price }}
+            </p>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            @if (item.completed) {
+            <div class="d-flex h4 m-0">
+              <i class="bi bi-check-circle me-2" style="color: green"></i>Order
+              Completed
+            </div>
+            }@else if(item.shipping) {
+            <div class="d-flex h4 m-0">
+              <i class="bi bi-truck me-2" style="color: gold"></i>Order Shipping
+            </div>
+            }@else {
+            <div class="d-flex h4 m-0">
+              <i class="bi bi-x-circle me-2" style="color: red"></i>Order
+              Cancelled
+            </div>
+            }
+            <button
+              type="button"
+              class="btn buyBtn"
+              [routerLink]="['/product', products[$index].id]"
+            >
+              Buy Again
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-column gap-2">
+        <button
+          type="button"
+          class="btn text-white"
+          style="background-color: #9e18b8"
+        >
+          Write a review
+        </button>
+        <button type="button" class="btn btn-outline-dark">
+          Contact seller
+        </button>
+        <button type="button" class="btn btn-outline-dark">
+          Shipment details
+        </button>
+        <button type="button" class="btn btn-outline-dark">
+          Request return
+        </button>
+      </div>
+    </div>
+  </div>
+  }
+</div>

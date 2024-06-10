@@ -11,17 +11,17 @@ import { CommentResolverService } from './services/comment-resolver.service';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { CategoryResolverService } from './services/category-resolver.service';
+import { AccountComponent } from './pages/account/account.component';
+import { OrdersComponent } from './pages/orders/orders.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { FAQComponent } from './pages/faq/faq.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { AuthGuard } from './guards/auth.guard';
+import { OrdersResolverService } from './services/orders-resolver.service';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent,
-    resolve: [ProductResolverService, CategoryResolverService],
-  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, resolve: [ProductResolverService] },
   {
     path: 'category',
     component: CategoriesComponent,
@@ -57,7 +57,19 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'faq', component: FAQComponent },
   { path: 'contact-us', component: ContactUsComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {
+    path: 'account',
+    component: AccountComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: '', redirectTo: '/account/orders', pathMatch: 'full' },
+      {
+        path: 'orders',
+        component: OrdersComponent,
+        resolve: [ProductResolverService, OrdersResolverService],
+      },
+    ],
+  },
 ];
 
 @NgModule({

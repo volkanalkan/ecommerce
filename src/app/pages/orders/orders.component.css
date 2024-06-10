@@ -1,0 +1,11 @@
+.buyBtn {
+  border-color: #9e18b8;
+  background-color: white;
+  color: #9e18b8;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.buyBtn:hover {
+  background-color: #9e18b8;
+  color: white;
+}

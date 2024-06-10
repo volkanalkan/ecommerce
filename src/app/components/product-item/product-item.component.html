@@ -5,7 +5,11 @@
 >
   <div class="img-btn">
     <img [src]="product.imagePathArr[0]" class="card-img-top" alt="pc" />
-    <button class="btn btn-secondary btn-sm rounded-circle" type="button">
+    <button
+      class="btn btn-secondary btn-sm rounded-circle"
+      type="button"
+      (click)="onAddtoFavourites()"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
@@ -52,8 +56,8 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-10 text-center hideDiv">
-        <a href="#" class="btn btn-primary btn-sm px-4 hideBtn"
-          ><i class="bi bi-cart3"> Add to cart</i></a
+        <a class="btn btn-primary btn-sm px-4 hideBtn"
+          ><i class="bi bi-cart3" (click)="onAddtoCart()"> Add to cart</i></a
         >
       </div>
     </div>

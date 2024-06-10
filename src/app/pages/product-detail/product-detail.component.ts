@@ -5,6 +5,8 @@ import { Comment } from '../../models/comment.model';
 import { ProductService } from '../../services/product.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CommentService } from '../../services/comment.service';
+import { CartService } from '../../services/cart.service';
+import { FavoritesService } from '../../services/favorites.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -24,7 +26,9 @@ export class ProductDetailComponent implements OnInit {
     private commentService: CommentService,
     private route: ActivatedRoute,
     private router: Router,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private cartService: CartService,
+    private favouritesService: FavoritesService
   ) {
     carouselConfig.interval = 0;
     carouselConfig.wrap = false;
@@ -41,6 +45,14 @@ export class ProductDetailComponent implements OnInit {
 
   onCategoryPath(category: string) {
     this.router.navigate(['/category/', category]);
+  }
+
+  onAddtoCart() {
+    this.cartService.addToCart(this.product);
+  }
+
+  onAddtoFavourites() {
+    this.favouritesService.addToFavorites(this.product);
   }
 
   increment() {

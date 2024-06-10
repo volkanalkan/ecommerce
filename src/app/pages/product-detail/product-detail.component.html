@@ -85,13 +85,19 @@
       <div class="">
         <div class="d-flex flex-row justify-content-start">
           <div class="">
-            <button class="btn-circle" type="button">
+            <button
+              class="btn-circle"
+              type="button"
+              (click)="onAddtoFavourites()"
+            >
               <i class="bi bi-heart"></i>
             </button>
           </div>
           <div class="px-3">
-            <a href="#" class="btn btn-primary btn-lg px-4"
-              ><i class="bi bi-cart3"> Add to cart</i></a
+            <a class="btn btn-primary btn-lg px-4"
+              ><i class="bi bi-cart3" (click)="onAddtoCart()">
+                Add to cart</i
+              ></a
             >
           </div>
           <div class="">

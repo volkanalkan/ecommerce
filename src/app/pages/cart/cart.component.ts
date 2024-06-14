@@ -18,7 +18,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     if (this.authService.isLoggedIn()) {
       this.cartService.cart$.subscribe((items) => {
-        this.cartItems = items;
+        this.cartItems = items.map((item) => ({ ...item, quantity: 1 }));
       });
     }
   }
@@ -29,5 +29,18 @@ export class CartComponent implements OnInit {
 
   clearCart() {
     this.cartService.clearCart();
+  }
+
+  updateQuantity(productId: string, quantity: number) {
+    const updatedItems = this.cartItems.map((item) =>
+      item.id === productId ? { ...item, quantity } : item
+    );
+    this.cartService.updateCart(updatedItems);
+  }
+
+  getTotalPrice() {
+    return this.cartItems
+      .reduce((total, item) => total + item.price * item.quantity, 0)
+      .toFixed(2);
   }
 }

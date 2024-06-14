@@ -21,4 +21,8 @@ export class CartService {
   clearCart() {
     this.cart.next([]);
   }
+
+  updateCart(updatedItems: any[]) {
+    this.cart.next(updatedItems);
+  }
 }

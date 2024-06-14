@@ -3,7 +3,7 @@
     class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-top"
   >
     <div class="container">
-      <a class="navbar-brand fs-2 fw-bold" href="#">
+      <a class="navbar-brand fs-2 fw-bold" routerLink="/home">
         <span class="textBlur">O/</span>
       </a>
       <button
@@ -22,7 +22,7 @@
           <li class="nav-item">
             <a
               class="nav-link text-uppercase fw-semibold"
-              href="#"
+              routerLink="/home"
               style="color: black"
               >Home</a
             >
@@ -51,49 +51,41 @@
           <li class="nav-item">
             <a
               class="nav-link text-uppercase fw-semibold"
-              href="#"
-              style="color: black"
               routerLink="/faq"
+              style="color: black"
               >FAQ</a
             >
           </li>
           <li class="nav-item">
             <a
               class="nav-link text-uppercase fw-semibold"
-              href="#"
-              style="color: black"
               routerLink="/contact-us"
+              style="color: black"
               >Contact Us</a
             >
           </li>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a
-              class="nav-link position-relative me-3"
-              routerLink="/favorites"
-              href="#"
-            >
+            <a class="nav-link position-relative me-3" routerLink="/favorites">
               <i class="fa fa-heart" style="color: black"></i>
               <span
                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
                 style="background-color: #9e18b8"
-                >0</span
               >
+                {{ favoriteCount }}
+              </span>
             </a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link position-relative me-3"
-              routerLink="/cart"
-              href="#"
-            >
+            <a class="nav-link position-relative me-3" routerLink="/cart">
               <i class="fa fa-shopping-cart" style="color: black"></i>
               <span
                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
                 style="background-color: #9e18b8"
-                >0</span
               >
+                {{ cartCount }}
+              </span>
             </a>
           </li>
           <ng-container *ngIf="user$ | async as user; else showLogin">

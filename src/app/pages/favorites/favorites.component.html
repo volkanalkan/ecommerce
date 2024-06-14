@@ -16,20 +16,17 @@
       Your favorites list is empty.
     </div>
     <div *ngIf="favoriteItems.length > 0">
-      <div class="list-group">
-        <div
-          class="list-group-item list-group-item-action flex-column align-items-start"
-          *ngFor="let item of favoriteItems"
-        >
-          <div class="d-flex w-100 justify-content-between">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        <div class="col" *ngFor="let item of favoriteItems">
+          <div class="card h-100">
             <img
               [src]="item.imagePathArr[0]"
+              class="card-img-top favorite-img"
               alt="{{ item.name }}"
-              class="me-3 favorite-img"
             />
-            <div class="flex-grow-1 ms-3">
-              <h5 class="mb-1">{{ item.name }}</h5>
-              <p class="mb-1">${{ item.price }}</p>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">${{ item.price }}</p>
               <button
                 class="btn btn-danger btn-sm"
                 (click)="removeFromFavorites(item.id)"

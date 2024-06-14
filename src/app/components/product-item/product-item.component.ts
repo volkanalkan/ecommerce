@@ -1,26 +1,27 @@
 import { Component, Input } from '@angular/core';
-import { Product } from '../../models/product.model';
-import { CartService } from '../../services/cart.service';
 import { FavoritesService } from '../../services/favorites.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
-  styleUrl: './product-item.component.css',
+  styleUrls: ['./product-item.component.css'],
 })
 export class ProductItemComponent {
-  @Input() product: Product;
+  @Input() product: any;
 
   constructor(
-    private cartService: CartService,
-    private favouritesService: FavoritesService
+    private favoritesService: FavoritesService,
+    private cartService: CartService
   ) {}
 
-  onAddtoCart() {
-    this.cartService.addToCart(this.product);
+  onAddToFavorites(event: Event): void {
+    event.stopPropagation();
+    this.favoritesService.addToFavorites(this.product);
   }
 
-  onAddtoFavourites() {
-    this.favouritesService.addToFavorites(this.product);
+  onAddToCart(event: Event): void {
+    event.stopPropagation();
+    this.cartService.addToCart(this.product);
   }
 }

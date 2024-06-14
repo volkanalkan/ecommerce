@@ -1,14 +1,14 @@
 <div
   class="card"
-  [routerLink]="['/product', product.id]"
   style="width: 14rem; cursor: pointer"
+  [routerLink]="['/product', product.id]"
 >
   <div class="img-btn">
     <img [src]="product.imagePathArr[0]" class="card-img-top" alt="pc" />
     <button
-      class="btn btn-secondary btn-sm rounded-circle"
+      class="btn btn-secondary btn-sm rounded-circle favorite-btn"
       type="button"
-      (click)="onAddtoFavourites()"
+      (click)="onAddToFavorites($event)"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -36,15 +36,17 @@
             style="color: #faa528"
           >
             <ng-template let-fill="fill" let-index="index">
-              @if (fill > 75) {
-              <i class="bi-star-fill" style="font-size: 1rem"></i>
-              } @else if (fill > 25 && fill < 75) {
-              <i class="bi-star-half" style="font-size: 1rem"></i>
-
-              } @else {
-
-              <i class="bi-star" style="font-size: 1rem"></i>
-              }
+              <ng-container *ngIf="fill > 75; else halfStar">
+                <i class="bi-star-fill"></i>
+              </ng-container>
+              <ng-template #halfStar>
+                <ng-container *ngIf="fill > 25">
+                  <i class="bi-star-half"></i>
+                </ng-container>
+                <ng-container *ngIf="fill <= 25">
+                  <i class="bi-star"></i>
+                </ng-container>
+              </ng-template>
             </ng-template>
           </ngb-rating>
           <p>&nbsp;{{ product.rating }}</p>
@@ -56,9 +58,12 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-10 text-center hideDiv">
-        <a class="btn btn-primary btn-sm px-4 hideBtn"
-          ><i class="bi bi-cart3" (click)="onAddtoCart()"> Add to cart</i></a
+        <a
+          class="btn btn-primary btn-sm px-4 hideBtn"
+          (click)="onAddToCart($event)"
         >
+          <i class="bi bi-cart3"></i> Add to cart
+        </a>
       </div>
     </div>
   </div>

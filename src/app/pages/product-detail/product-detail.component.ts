@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Input } from '@angular/core';
 import { Product } from '../../models/product.model';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Comment } from '../../models/comment.model';
@@ -28,7 +28,7 @@ export class ProductDetailComponent implements OnInit {
     private router: Router,
     private elementRef: ElementRef,
     private cartService: CartService,
-    private favouritesService: FavoritesService
+    private favoritesService: FavoritesService
   ) {
     carouselConfig.interval = 0;
     carouselConfig.wrap = false;
@@ -51,8 +51,9 @@ export class ProductDetailComponent implements OnInit {
     this.cartService.addToCart(this.product);
   }
 
-  onAddtoFavourites() {
-    this.favouritesService.addToFavorites(this.product);
+  onAddtoFavorites() {
+    event.stopPropagation();
+    this.favoritesService.addToFavorites(this.product);
   }
 
   increment() {

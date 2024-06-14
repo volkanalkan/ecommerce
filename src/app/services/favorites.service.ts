@@ -10,7 +10,9 @@ export class FavoritesService {
 
   addToFavorites(product: any) {
     const currentFavorites = this.favorites.value;
-    this.favorites.next([...currentFavorites, product]);
+    if (!currentFavorites.find((item) => item.id === product.id)) {
+      this.favorites.next([...currentFavorites, product]);
+    }
   }
 
   removeFromFavorites(productId: string) {
